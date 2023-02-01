@@ -1,15 +1,23 @@
-﻿using System;
+﻿using DenicekMaleC3;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DenicekMaleC3UWU
+namespace DenicekMaleC3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Zapisecek zapisecek = new Zapisecek("První vložení", "blablablablabalbalbalbalbal", true, DateTime.Now);
+
+            zapisecek.Info();
+
+            Console.ReadLine();
+
         }
     }
 }
+
