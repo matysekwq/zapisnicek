@@ -17,6 +17,11 @@ namespace DenicekMaleC3
         public Databaze()
         {
             zapisnik = new List<Zapisecek>();
+            // dočasně - vložení pár záznamů po startu
+            zapisnik.Add(new Zapisecek("prvni poznamka", "text první poznamky", true, DateTime.Now));
+            zapisnik.Add(new Zapisecek("Druha poznamka", "text druhé poznamky", false, DateTime.Now));
+            zapisnik.Add(new Zapisecek("Třetí poznamka", "text třetí poznamky", true, DateTime.Now));
+            zapisnik.Add(new Zapisecek("Čtvrtá poznamka", "text čtvrté poznamky", true, DateTime.Now));
         }
 
         public void Pridat()
@@ -74,6 +79,38 @@ namespace DenicekMaleC3
 
         }
 
+        public void VypsatVerejne()
+        {
+            foreach (Zapisecek zapisecek in zapisnik)
+            {
+                if (zapisecek.Zamceno == false)
+                {
+                    zapisecek.Info();
+                }
+            }
+        }
+
+        public void VypsatSoukrome()
+        {
+            if (KontrolaHesla())
+            {
+                foreach (Zapisecek zapisecek in zapisnik)
+                {
+                    if (zapisecek.Zamceno == true)
+                    {
+                        zapisecek.Info();
+                    }
+                }
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Špatné heslo, pokračuj libovolnou klávesou....");
+                Console.ResetColor();
+                Console.ReadKey();
+            }
+        }
+
         bool KontrolaHesla()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -91,6 +128,57 @@ namespace DenicekMaleC3
                 return false;
             }
         }
+
+        public void Smazat()
+        {
+            int odpoved = CislovanySeznam();
+
+            if (zapisnik[odpoved].Zamceno)
+            {
+                if (KontrolaHesla())
+                {
+                    zapisnik.RemoveAt(odpoved);
+                }
+                else
+                {
+
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Špatné heslo, pokračuj libovolnou klávesou....");
+                    Console.ResetColor();
+                    Console.ReadKey();
+
+                }
+            }
+            else
+            {
+                zapisnik.RemoveAt(odpoved);
+            }
+        }
+
+        int CislovanySeznam()
+        {
+            int index = 1;
+
+            foreach (Zapisecek zapisecek in zapisnik)
+            {
+                if (zapisecek.Zamceno)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(index + ". " + zapisecek.Nadpis);
+                    Console.ResetColor();
+                    index++;
+                }
+                else
+                {
+                    Console.WriteLine(index + ". " + zapisecek.Nadpis);
+                    index++;
+                }
+            }
+            Console.Write("Který záznam chceš smazat?: ");
+            int hodnota = int.Parse(Console.ReadLine());
+            hodnota--;
+
+            return hodnota;
+        }
     }
 }
-

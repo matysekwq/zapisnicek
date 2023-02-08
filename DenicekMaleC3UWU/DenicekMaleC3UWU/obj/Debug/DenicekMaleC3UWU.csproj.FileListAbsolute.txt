@@ -1,0 +1,8 @@
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\bin\Debug\DenicekMaleC3UWU.exe.config
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\bin\Debug\DenicekMaleC3UWU.exe
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\bin\Debug\DenicekMaleC3UWU.pdb
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\obj\Debug\DenicekMaleC3UWU.csproj.AssemblyReference.cache
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\obj\Debug\DenicekMaleC3UWU.csproj.SuggestedBindingRedirects.cache
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\obj\Debug\DenicekMaleC3UWU.csproj.CoreCompileInputs.cache
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\obj\Debug\DenicekMaleC3UWU.exe
+C:\Users\bukovsky.2020\Source\Repos\denicekmalec3uwu\DenicekMaleC3UWU\DenicekMaleC3UWU\obj\Debug\DenicekMaleC3UWU.pdb

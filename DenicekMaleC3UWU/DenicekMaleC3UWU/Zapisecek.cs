@@ -33,4 +33,3 @@ namespace DenicekMaleC3
         }
     }
 }
-
