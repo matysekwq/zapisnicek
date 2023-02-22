@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -179,6 +180,18 @@ namespace DenicekMaleC3
             hodnota--;
 
             return hodnota;
+        }
+        // metoda vyexportuje celý obsah do textového souboru
+        // každý záznam na samostném řádku, hodnoty odděleny středníkem
+        public void Export()
+        {
+            StreamWriter zapis = new.StreamWriter("data.txt");
+            foreach (Zapisecek zapisecek in zapisnik)
+            {
+                zapis.WriteLine(zapisecek.Nadpis + ";" + zapisecek.Text + ";" + zapisecek.Zamceno + ";" + zapisecek.DatumVlozeni);
+            }
+
+            zapis.Close();
         }
     }
 }
