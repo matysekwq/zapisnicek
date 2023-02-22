@@ -1,0 +1,4 @@
+prvni poznamka;text první poznamky;True;22.02.2023 11:32:44
+Druha poznamka;text druhé poznamky;False;22.02.2023 11:32:45
+Třetí poznamka;text třetí poznamky;True;22.02.2023 11:32:45
+Čtvrtá poznamka;text čtvrté poznamky;True;22.02.2023 11:32:45

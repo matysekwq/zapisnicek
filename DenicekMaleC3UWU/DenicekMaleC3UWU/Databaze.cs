@@ -185,13 +185,26 @@ namespace DenicekMaleC3
         // každý záznam na samostném řádku, hodnoty odděleny středníkem
         public void Export()
         {
-            StreamWriter zapis = new.StreamWriter("data.txt");
+            StreamWriter zapis = new StreamWriter("data.txt");
             foreach (Zapisecek zapisecek in zapisnik)
             {
                 zapis.WriteLine(zapisecek.Nadpis + ";" + zapisecek.Text + ";" + zapisecek.Zamceno + ";" + zapisecek.DatumVlozeni);
             }
 
             zapis.Close();
+        }
+        public void Import()
+        {
+            StreamReader cteni = new StreamReader("Data.txt");
+
+            string radek;
+            while ((radek = cteni.ReadLine()) != null)
+            {
+                string[] pole = radek.Split(';');
+                zapisnik.Add(new Zapisecek(pole[0], pole[1], bool.Parse(pole[2]), DateTime.Parse(pole[3])));
+            }
+
+            cteni.Close();
         }
     }
 }

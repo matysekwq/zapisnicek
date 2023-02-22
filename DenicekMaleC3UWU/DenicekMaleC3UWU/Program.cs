@@ -13,6 +13,7 @@ namespace DenicekMaleC3
 
             string volba;
             Databaze databaze = new Databaze();
+            databaze.Import();
 
 
 
@@ -63,7 +64,7 @@ namespace DenicekMaleC3
                         break;
                 }
             } while (volba != "k");
-
+            databaze.Export();
         }
     }
 }
